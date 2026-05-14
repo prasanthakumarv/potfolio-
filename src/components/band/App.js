@@ -23,7 +23,7 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 const GLTF_PATH = '/assets/kartu2.glb';
 const TEXTURE_PATH = '/assets/bandd.png';
-const CARD_PHOTO_PATH = '/assets/PP.png';
+const CARD_PHOTO_PATH = '/assets/prasantha_photo.jpg';
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);

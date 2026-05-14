@@ -335,7 +335,7 @@ export default function About() {
                 }}
               >
                 <img
-                  src="/assets/PP.png"
+                  src="/assets/prasantha_photo.jpg"
                   alt="Profile"
                   style={{
                     width: 240,
