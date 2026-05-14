@@ -1,22 +1,21 @@
-import "./globals.css";
-import RefreshRedirect from '@/components/RefreshRedirect'
+export const dynamic = 'force-dynamic';
 
-export const metadata = {
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
   title: "Prasantha Kumar V - Data Analyst & Gen AI",
-  description: "Portfolio...",
+  description: "Passionate Data Analyst & Gen AI Enthusiast",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body>
-        <RefreshRedirect />
-        {children}
-        </body>
+      <body>{children}</body>
     </html>
   );
 }
