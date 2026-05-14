@@ -60,6 +60,7 @@ export default function Hero({ showApp }: HeroProps) {
           width: "340px",
           height: "100%",
           zIndex: 40,
+          overflow: "hidden",
           pointerEvents: showApp ? "auto" : "none",
         }}
       >

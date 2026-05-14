@@ -49,6 +49,7 @@ export default function App() {
         pointerEvents: 'none',
         zIndex: 1,
         overflow: 'hidden',
+        clipPath: 'inset(0)',
       }}
     >
       <Canvas
