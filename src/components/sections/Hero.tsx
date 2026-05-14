@@ -46,16 +46,19 @@ export default function Hero({ showApp }: HeroProps) {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* APP LAYER */}
+      {/* 3D CARD - RIGHT SIDE ONLY */}
       <div
         style={{
           position: "absolute",
-          inset: 0,
+          top: 0,
+          right: 0,
+          width: "340px",
+          height: "100%",
           zIndex: 40,
           pointerEvents: showApp ? "auto" : "none",
         }}

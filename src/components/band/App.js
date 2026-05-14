@@ -43,12 +43,12 @@ export default function App() {
     <div
       className="responsive-wrapper"
       style={{
-        position: 'absolute',
-        inset: 0,
+        position: 'relative',
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
         zIndex: 1,
+        overflow: 'hidden',
       }}
     >
       <Canvas
@@ -225,6 +225,7 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
 
   curve.curveType = 'chordal';
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  cardPhoto.flipY = false;
 
   return (
     <>
@@ -263,7 +264,11 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
             }}
           >
             <mesh geometry={nodes.card.geometry}>
-              <meshStandardMaterial map={cardPhoto} roughness={0.3} metalness={0.1} />
+              <meshStandardMaterial 
+                map={cardPhoto} 
+                roughness={0.4} 
+                metalness={0.05}
+              />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
