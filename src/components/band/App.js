@@ -23,9 +23,11 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 const GLTF_PATH = '/assets/kartu2.glb';
 const TEXTURE_PATH = '/assets/bandd.png';
+const CARD_PHOTO_PATH = '/assets/PP.png';
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
+useTexture.preload(CARD_PHOTO_PATH);
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -135,6 +137,7 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
 
   const { nodes, materials } = useGLTF(GLTF_PATH);
   const texture = useTexture(TEXTURE_PATH);
+  const cardPhoto = useTexture(CARD_PHOTO_PATH);
   const { width, height } = useThree((state) => state.size);
 
   const [curve] = useState(
@@ -260,7 +263,7 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
             }}
           >
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial {...materials.base} />
+              <meshStandardMaterial map={cardPhoto} roughness={0.3} metalness={0.1} />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
