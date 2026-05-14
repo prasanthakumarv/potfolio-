@@ -21,7 +21,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-const GLTF_PATH = '/assets/kartu.glb';
+const GLTF_PATH = '/assets/kartu2.glb';
 const TEXTURE_PATH = '/assets/bandd.png';
 
 useGLTF.preload(GLTF_PATH);
